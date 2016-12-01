@@ -16,7 +16,17 @@
         >
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger SourceObject="{Binding DisplayLogin}">
-            <prism:PopupWindowAction IsModal="True">
+            <prism:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True">
+                <prism:PopupWindowAction.WindowStyle>
+
+                    <Style TargetType="Window">
+                        <Setter Property="Width" Value="350" ></Setter>
+                        <Setter Property="Height" Value="200"></Setter>
+                        <Setter Property="ResizeMode" Value="NoResize"></Setter>
+                        <Setter Property="Block.AllowDrop" Value="False"></Setter>
+                    </Style>
+                </prism:PopupWindowAction.WindowStyle>
+              
                 <prism:PopupWindowAction.WindowContent>
                     <views:LoginView></views:LoginView>
                 </prism:PopupWindowAction.WindowContent>

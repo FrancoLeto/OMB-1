@@ -19,6 +19,16 @@ namespace OMB_Desktop.ViewModel
       }
     }
 
+        private string _password;
+        public string Password {
+
+            get { return _password; }
+            set
+            {
+               Set(() =>Password, ref _password,value) ;
+            }
+        }
+
     public InteractionRequest<INotification> FaltanDatos { get; set; }
 
     public InteractionRequest<INotification> CredencialesInvalidas { get; set; }
