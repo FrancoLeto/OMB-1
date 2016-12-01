@@ -1,22 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Entidades;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using Infraestructura;
-using OMB_Desktop.Common;
 using Prism.Interactivity.InteractionRequest;
 using Servicios;
 
 namespace OMB_Desktop.ViewModel
 {
-  public class LoginViewModel : ViewModelBase, IInteractionRequestAware
+    public class LoginViewModel : ViewModelBase, IInteractionRequestAware
   {
     private string _userid;
 
@@ -52,7 +42,7 @@ namespace OMB_Desktop.ViewModel
 
     public void DoLogin(string pass)
     {
-      SecurityServices seg = new SecurityServices(new NullMailService());
+      SecurityServices seg = new SecurityServices();
 
       if (!string.IsNullOrWhiteSpace(pass))
       {

@@ -15,7 +15,7 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
-using OMB_Desktop.ViewModels;
+//using OMB_Desktop.ViewModels;
 
 namespace OMB_Desktop.ViewModel
 {
@@ -45,7 +45,7 @@ namespace OMB_Desktop.ViewModel
       ////}
 
       SimpleIoc.Default.Register<MainWindowViewModel>();
-      SimpleIoc.Default.Register<LoginViewModel>();
+      //SimpleIoc.Default.Register<LoginViewModel>();
     }
 
     public MainWindowViewModel Main
@@ -53,10 +53,10 @@ namespace OMB_Desktop.ViewModel
       get { return ServiceLocator.Current.GetInstance<MainWindowViewModel>(); }
     }
 
-    public LoginViewModel Login
-    {
-      get { return ServiceLocator.Current.GetInstance<LoginViewModel>(); }
-    }
+    //public LoginViewModel Login
+    //{
+    //  get { return ServiceLocator.Current.GetInstance<LoginViewModel>(); }
+    //}
         
     public static void Cleanup()
     {

@@ -11,8 +11,13 @@
         Title="Administracion de OMB" 
         WindowStartupLocation="CenterScreen"
         Height="700" Width="1100"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
         >
-
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding DisplayLogin}">
+            <prism:PopupWindowAction IsModal="True"></prism:PopupWindowAction>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
   <Window.Resources>
     <system:String x:Key="StatusNoConectado">Usuario no Conectado</system:String>
     <system:String x:Key="StatusNoConectadoFall">Usuario no Conectado*</system:String>
