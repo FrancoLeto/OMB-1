@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:prism="http://prismlibrary.com/"
+        xmlns:views="clr-namespace:OMB_Desktop.Views"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Loaded="MainWindow_OnLoaded"
@@ -15,7 +16,11 @@
         >
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger SourceObject="{Binding DisplayLogin}">
-            <prism:PopupWindowAction IsModal="True"></prism:PopupWindowAction>
+            <prism:PopupWindowAction IsModal="True">
+                <prism:PopupWindowAction.WindowContent>
+                    <views:LoginView></views:LoginView>
+                </prism:PopupWindowAction.WindowContent>
+            </prism:PopupWindowAction>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
   <Window.Resources>
