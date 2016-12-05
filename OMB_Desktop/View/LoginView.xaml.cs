@@ -26,6 +26,7 @@ namespace OMB_Desktop.Views
     //  tiene lugar cuando los controles del control se cargaron completamente
     private void LoginViewLoaded(object sender, RoutedEventArgs e)
     {
+
       //  Este uso de codebehind es inevitable
       txtUsuario.Focus();
     }
