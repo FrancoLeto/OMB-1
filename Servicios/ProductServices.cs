@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -15,8 +17,8 @@ namespace Servicios
         public bool AgregarLibro()
         {
             bool result= false;
-
-
+            OMBContext ctx = OMBContext.DB;
+            Libro lib = new Libro(); 
 
             return result;
         }
