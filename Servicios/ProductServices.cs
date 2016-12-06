@@ -12,5 +12,14 @@ namespace Servicios
   /// </summary>
   public class ProductServices
   {
+        public bool AgregarLibro()
+        {
+            bool result= false;
+
+
+
+            return result;
+        }
+
   }
 }
